@@ -1,21 +1,32 @@
-import React from 'react';
-import styles from './Header.module.scss';
+import React, {useState} from "react";
+import styles from "./Header.module.scss";
+import Menu from "./Menu";
 
-function MenuBtn() {
+function MenuBtn({onClick, isOpen}) {
+  console.log(isOpen)
   return (
-    <div className={styles['menu-btn']}>
-        <div className={`${styles['btn-top']} ${styles.btn}`}></div>
-        <div className={`${styles['btn-bottom']} ${styles.btn}`}></div>
-      </div>
-  )
+    <div className={styles["menu-btn"]} onClick={onClick}>
+      <div className={isOpen ? styles.open : ""}></div>
+      <div className={isOpen ? styles.open : ""}></div>
+    </div>
+  );
 }
 
-export default function Header() {
 
+
+export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  
   return (
-    <div className={styles.header}>
+    <>
+    <div className={isOpen ? `${styles["header-menu"]} ${styles.header}` : styles.header}>
       <p>Aurélie BERNARD</p>
-      <MenuBtn />
+      <MenuBtn isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}/>
+      <Menu/>
     </div>
-  )
+    
+    </>
+    
+  );
 }
