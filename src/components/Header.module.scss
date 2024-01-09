@@ -1,14 +1,11 @@
 @import "../assets/variable.scss";
 
-.header {
+.header-container {
+  position: fixed;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10%;
-  height: 10%;
-}
-
-.header-menu {
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
   background-color: $primary-color;
   p {
     color: $secondary-color;
@@ -17,6 +14,13 @@
 
 p {
   color: $primary-color;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
 }
 
 .menu-btn {
