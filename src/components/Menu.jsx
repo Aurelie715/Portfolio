@@ -3,12 +3,14 @@ import styles from "./Menu.module.scss";
 
 export default function Menu() {
   return (
-    <div className={styles.menu}>
+    <nav className={styles.menu}>
       <p>FR - EN</p>
-      <p>ACCUEIL</p>
-      <p>PORTFOLIO</p>
-      <p>A PROPOS</p>
-      <p>CONTACT</p>
-    </div>
+      <ul>
+        <li>ACCUEIL</li>
+        <li>PORTFOLIO</li>
+        <li>A PROPOS</li>
+        <li>CONTACT</li>
+      </ul>
+    </nav>
   );
 }
