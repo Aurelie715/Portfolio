@@ -1,0 +1,16 @@
+@import "../assets/variable.scss";
+
+.menu {
+    // position: absolute;
+    height: 100vh;
+    background-color: $primary-color;
+    z-index: 99;
+    inset: 10% 0 0 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+        color: $secondary-color;
+    }
+}

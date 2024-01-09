@@ -3,7 +3,6 @@ import styles from "./Header.module.scss";
 import Menu from "./Menu";
 
 function MenuBtn({onClick, isOpen}) {
-  console.log(isOpen)
   return (
     <div className={styles["menu-btn"]} onClick={onClick}>
       <div className={isOpen ? styles.open : ""}></div>

@@ -1,13 +1,14 @@
 import React from "react";
+import styles from "./Menu.module.scss";
 
 export default function Menu() {
   return (
-    <div>
-      <ul>
-        <li>Accueil</li>
-        <li>Portfolio</li>
-        <li>a propos</li>
-      </ul>
+    <div className={styles.menu}>
+      <p>FR - EN</p>
+      <p>ACCUEIL</p>
+      <p>PORTFOLIO</p>
+      <p>A PROPOS</p>
+      <p>CONTACT</p>
     </div>
   );
 }
